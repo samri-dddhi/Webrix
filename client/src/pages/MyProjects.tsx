@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { Project } from "../types";
 import { Loader2Icon, PlusIcon } from "lucide-react";
@@ -16,6 +16,7 @@ const MyProjects = () => {
     }, 1000);
   };
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchProjects();
   }, []);
   return (
